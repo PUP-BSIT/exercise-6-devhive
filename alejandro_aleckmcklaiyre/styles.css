@@ -12,13 +12,27 @@
   font-weight: bold;
 }
 
-.hero {
+.hero,
+.con-img {
   grid-area: hero;
   width: 30vw;
   height: auto;
   max-height: 300px;
   max-width: 300px;
+  justify-content: center;
   object-fit: contain;
+}
+
+#nav,
+#interest,
+#work,
+#testimonial,
+#gallery,
+#goals,
+#comment,
+#contact {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #nav {
@@ -27,8 +41,7 @@
   background-image: url(./assets/background.gif);
   justify-content: center;
   align-items: center;
-  height: 50vh;
-  max-height: 70px;
+  height: vh;
   gap: 5px;
   padding: 10px;
 }
@@ -44,17 +57,13 @@
 
 .title {
   grid-area: title;
-}
-
-h1 {
-  font-size: 3vw;
+  font-size: 20px;
 }
 
 #interest {
   display: grid;
   justify-content: center;
   gap: 5px;
-  padding: 20px;
   background-color: #e0e0e0;
 }
 
@@ -69,14 +78,12 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 20px;
-  background-image: url(./bg_image.png);
+  background-image: url(./assets/bg_image.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.work-card {
-  display: block;
+.work-list li {
   background-color: #4e7b84;
   color: white;
   padding: 15px;
@@ -84,10 +91,6 @@ h1 {
   border-radius: 10px;
   margin: 10px;
   text-align: center;
-  justify-content: center;
-}
-
-.work-list {
   list-style-type: none;
   grid-area: work-list;
 }
@@ -97,7 +100,6 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  padding: 40px;
   background-color: #e0e0e0;
 }
 
@@ -133,16 +135,6 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 20px;
-  background-color: #bfbbbb;
-}
-
-#gallery {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 20px;
   background-color: #bfbbbb;
 }
 
@@ -186,13 +178,104 @@ h1 {
   grid-area: minion;
 }
 
+#goals {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #4e7b84;
+}
+
+.goal-1,
+.goal-2,
+.goal-3,
+.goal-4,
+.goal-5 {
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  font-size: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.goal-1 {
+  background-color: #d5ad36;
+  grid-area: g1;
+}
+.goal-2 {
+  background-color: #d5ad36;
+  grid-area: g2;
+}
+.goal-3 {
+  background-color: #d5ad36;
+  grid-area: g3;
+}
+.goal-4 {
+  background-color: #e5e5e5;
+  grid-area: g4;
+}
+.goal-5 {
+  background-color: #e5e5e5;
+  grid-area: g5;
+}
+.goal h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.goal p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#comment {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #bfbbbb;
+}
+
+.comment-form {
+  grid-area: com-form;
+  display: block;
+  background-color: #4e7b84;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: left;
+  gap: 1 0px;
+}
+
+.comment-li li {
+  grid-area: com-li;
+  align-items: center;
+  list-style: none;
+  background-color: D7D9DB;
+  border: 1px solid;
+  padding: 10px;
+  margin: 10px;
+  width: 50vw;
+  max-width: 300px;
+  border-color: #55828b;
+  background-color: #ffffff;
+}
+
+#submit-btn {
+  cursor: pointer;
+}
+
 #contact {
   display: grid;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 50px;
-  background-image: url(./bg_image.png);
+  background-image: url(./assets/bg_image.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -245,16 +328,6 @@ button:hover {
   background-color: #3b4d52;
 }
 
-.con-img {
-  grid-area: con-img;
-  width: 30vw;
-  height: auto;
-  max-height: 300px;
-  max-width: 300px;
-  object-fit: contain;
-  justify-content: center;
-}
-
 @media (max-width: 426px) {
   #nav {
     grid-template-areas: "logo . title";
@@ -280,7 +353,7 @@ button:hover {
   #contact {
     grid-template-areas:
       "cform cform cform"
-      ". con-img . ";
+      ". hero . ";
   }
   #gallery {
     grid-template-areas:
@@ -292,6 +365,21 @@ button:hover {
       ". maki  ."
       ". zoro .";
   }
+  #goals {
+    grid-template-areas:
+      "header"
+      " g1 "
+      " g2 "
+      " g3 "
+      " g4"
+      " g5 ";
+  }
+  #comment {
+    grid-template-areas:
+      "header"
+      " com-li "
+      " com-form ";
+  }
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
@@ -301,8 +389,10 @@ button:hover {
 
   #interest {
     grid-template-areas:
+      ". . hero"
       "header . hero "
-      "int-list . hero";
+      "int-list . hero"
+      ". . hero";
   }
 
   #work {
@@ -317,8 +407,8 @@ button:hover {
   }
   #contact {
     grid-template-areas:
-      " cform . con-img "
-      " cform . con-img ";
+      " cform . hero "
+      " cform . hero ";
   }
   #gallery {
     grid-template-areas:
@@ -327,6 +417,17 @@ button:hover {
       "waffle minion "
       "maki luna "
       "zoro zoro  ";
+  }
+  #goals {
+    grid-template-areas:
+      " . header ."
+      " g1 g2 g3"
+      " g4 g5 . ";
+  }
+  #comment {
+    grid-template-areas:
+      " header com-form"
+      " com-li  com-form";
   }
 }
 
@@ -353,8 +454,8 @@ button:hover {
   }
   #contact {
     grid-template-areas:
-      " cform . con-img "
-      " cform . con-img ";
+      " cform . hero "
+      " cform . hero ";
   }
   #gallery {
     grid-template-areas:
@@ -362,5 +463,15 @@ button:hover {
       "waffle yuta luna"
       "waffle minion luna"
       "maki zoro . ";
+  }
+  #goals {
+    grid-template-areas:
+      ". . header . ."
+      " g1 g2 g3 g4 g5";
+  }
+  #comment {
+    grid-template-areas:
+      " header com-form"
+      " com-li  com-form";
   }
 }
