@@ -1,10 +1,10 @@
-const nameInput = document.getElementById('commenter-name');
-const commentInput = document.getElementById('comment-text');
-const commentButton = document.getElementById('comment-btn');
+function buttonEnabler() {
+	let name = document.getElementById("user_name");
+	let comment = document.getElementById("user_comment");
 
-function toggleButton() {
-    commentButton.disabled = !(nameInput.value.trim() && commentInput.value.trim());
+	if(comment.value.length > 0 && name.value.length > 0) {
+		document.getElementById("comment_button").disabled = false;
+    } else {
+		document.getElementById("comment_button").disabled = true;
+	}
 }
-
-nameInput.addEventListener('input', toggleButton);
-commentInput.addEventListener('input', toggleButton);
