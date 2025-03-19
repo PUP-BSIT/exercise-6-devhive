@@ -1,6 +1,6 @@
 body {
     font-family: 'Press Start 2P', cursive;
-    background-color: #4EC0CA; /* Flappy Bird sky blue */
+    background-color: #4EC0CA;
     color: #333;
     margin: 0;
     padding: 0;
@@ -10,16 +10,15 @@ body {
 }
 
 header {
-    background-color: #FED700; /* Flappy Bird yellow */
+    background-color: #FED700;
     padding: 30px;
-    color: #553847; /* Darker color for contrast */
+    color: #553847; 
     text-align: center;
-    border-bottom: 8px solid #D8A903; /* Darker yellow for border */
+    border-bottom: 8px solid #D8A903; 
     position: relative;
     overflow: hidden;
 }
 
-/* Clouds in the header background */
 header:before {
     content: "";
     position: absolute;
@@ -70,7 +69,6 @@ main {
     position: relative;
 }
 
-/* Adding pipes as background elements */
 main:before {
     content: "";
     position: fixed;
@@ -78,7 +76,7 @@ main:before {
     left: 5%;
     width: 80px;
     height: 200px;
-    background-color: #73BF2E; /* Flappy Bird pipe green */
+    background-color: #73BF2E; 
     border: 5px solid #2C9100;
     border-bottom: none;
     z-index: -1;
@@ -105,7 +103,7 @@ main:after {
     max-width: 800px;
     border-radius: 10px;
     background-color: #FFFFFF;
-    border: 5px solid #553847; /* Dark brown like Flappy Bird UI */
+    border: 5px solid #553847; 
     box-shadow: 0 8px 0 #372530, 0 12px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease;
     position: relative;
@@ -144,7 +142,7 @@ li {
 }
 
 a {
-    color: #E84A3C; /* Flappy Bird reddish color */
+    color: #E84A3C; 
     text-decoration: none;
 }
 
@@ -185,7 +183,7 @@ input:focus, select:focus, textarea:focus {
 
 button {
     padding: 12px;
-    background-color: #E84A3C; /* Flappy Bird red */
+    background-color: #E84A3C; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -209,7 +207,7 @@ button:active {
 footer {
     text-align: center;
     padding: 15px;
-    background-color: #73BF2E; /* Flappy Bird green */
+    background-color: #73BF2E;
     color: #553847;
     border-top: 5px solid #2C9100;
     margin-top: 40px;
@@ -217,7 +215,6 @@ footer {
     font-size: 0.7rem;
 }
 
-/* Ground texture in footer */
 footer:before {
     content: "";
     position: absolute;
@@ -230,7 +227,6 @@ footer:before {
     background-size: 20px 20px;
 }
 
-/* Enhanced Gallery Styling */
 #gallery {
     padding: 25px;
     position: relative;
@@ -262,7 +258,6 @@ footer:before {
     border-color: #FED700;
 }
 
-/* Adding a Flappy Bird-style frame around each image */
 .image-container a {
     position: relative;
     display: block;
@@ -278,7 +273,6 @@ footer:before {
     transform: scale(1.03);
 }
 
-/* Add pipe decoration to gallery section */
 #gallery::before {
     content: "";
     position: absolute;
@@ -305,7 +299,6 @@ footer:before {
     z-index: -1;
 }
 
-/* Adding title animation */
 #gallery h2 {
     animation: bounce 2s infinite;
     color: #553847;
@@ -318,7 +311,6 @@ footer:before {
     50% { transform: translateY(-10px); }
 }
 
-/* Add clouds floating in the background */
 .image-container::before {
     content: "";
     position: absolute;
@@ -355,7 +347,6 @@ footer:before {
     to { transform: translateX(-100%); }
 }
 
-/* Add caption to images on hover */
 .image-container a::after {
     content: "🎮";
     position: absolute;
@@ -379,5 +370,5 @@ footer:before {
 
 #contact, #my_goals {
     overflow: hidden;
-    max-height: fit-content; /* Adjust height as needed */
+    max-height: fit-content;    
 }
