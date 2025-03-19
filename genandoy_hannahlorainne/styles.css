@@ -358,6 +358,11 @@ footer:before {
     to { transform: translateX(-100%); }
 }
 
+#comment-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
 .image-container a::after {
     content: "🎮";
     position: absolute;
