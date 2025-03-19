@@ -98,32 +98,43 @@
 
     <div id="comment">
       <h2 class="header">Comments</h2>
-      <div class="comment-form">
-      <form>
+      <form class="comment-form" name="comment-form">
         <div class="name">
           <label for="name">Name</label>
-          <input type="text" name="name" id="name" placeholder="Name" />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            onkeyup="checkform()"
+            placeholder="Name"
+          />
         </div>
         <div class="comment">
           <label for="comment-text"> Add comments: </label>
-          <textarea id="comment-text" name="comment" rows="5" cols="33"> </textarea>
+          <textarea
+            id="comment-text"
+            name="comment"
+            rows="5"
+            cols="33"
+            onkeyup="checkform()"
+          ></textarea>
         </div>
-        <button id="submit-btn">Submit</button></div>
+        <button id="submit-btn" disabled>Submit</button>
+        <script src="script.js"></script>
       </form>
-
-      <div class="comment-li">
-        <ul>
-          <li>...</li>
-          <li>..</li>
-          <li>...</li>
-        </ul>
-      </div>
+      
+        <div class="comment-li">
+          <ul>
+            <li>...</li>
+            <li>..</li>
+            <li>...</li>
+          </ul>
+        </div>
     </div>
 
     <div id="contact">
       <form>
         <h2 class="header">Contact Form</h2>
-
         <div class="name-form">
           <label for="fname">Name</label>
           <input type="text" name="fname" id="fname" placeholder="Name" />
@@ -177,7 +188,7 @@
         </div>
 
         <div class="button">
-          <button>Submit</button>
+          <button type="submit">Submit</button>
         </div>
       </form>
       <img class="con-img" src="./assets/contact.jpg" alt="cat with phone" />
