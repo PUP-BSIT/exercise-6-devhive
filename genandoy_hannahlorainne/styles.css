@@ -1,6 +1,7 @@
 body {
     font-family: 'Press Start 2P', cursive;
     background-color: #4EC0CA;
+    background-color: #4EC0CA;
     color: #333;
     margin: 0;
     padding: 0;
@@ -15,6 +16,11 @@ header {
     color: #553847; 
     text-align: center;
     border-bottom: 8px solid #D8A903; 
+    background-color: #FED700;
+    padding: 30px;
+    color: #553847;
+    text-align: center;
+    border-bottom: 8px solid #D8A903;
     position: relative;
     overflow: hidden;
 }
@@ -77,6 +83,7 @@ main:before {
     width: 80px;
     height: 200px;
     background-color: #73BF2E; 
+    background-color: #73BF2E;
     border: 5px solid #2C9100;
     border-bottom: none;
     z-index: -1;
@@ -104,6 +111,7 @@ main:after {
     border-radius: 10px;
     background-color: #FFFFFF;
     border: 5px solid #553847; 
+    border: 5px solid #553847;
     box-shadow: 0 8px 0 #372530, 0 12px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease;
     position: relative;
@@ -143,6 +151,7 @@ li {
 
 a {
     color: #E84A3C; 
+    color: #E84A3C;
     text-decoration: none;
 }
 
@@ -184,6 +193,7 @@ input:focus, select:focus, textarea:focus {
 button {
     padding: 12px;
     background-color: #E84A3C; 
+    background-color: #E84A3C;
     color: white;
     border: none;
     border-radius: 5px;
@@ -207,6 +217,7 @@ button:active {
 footer {
     text-align: center;
     padding: 15px;
+    background-color: #73BF2E;
     background-color: #73BF2E;
     color: #553847;
     border-top: 5px solid #2C9100;
@@ -371,4 +382,5 @@ footer:before {
 #contact, #my_goals {
     overflow: hidden;
     max-height: fit-content;    
+    max-height: fit-content;
 }
