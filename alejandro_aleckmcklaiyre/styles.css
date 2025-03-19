@@ -110,7 +110,7 @@
 }
 
 .testimonial li {
-  background-color: D7D9DB;
+  background-color: #d7d9db;
   border: 1px solid;
   gap: 5px;
   padding: 10px;
@@ -322,10 +322,6 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1em;
-}
-
-button:hover {
-  background-color: #3b4d52;
 }
 
 @media (max-width: 426px) {
